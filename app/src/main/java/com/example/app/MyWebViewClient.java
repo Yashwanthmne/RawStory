@@ -1,4 +1,4 @@
-package com.rawstory.rawstory;
+package com.example.app;
 
 import android.content.Intent;
 import android.net.Uri;

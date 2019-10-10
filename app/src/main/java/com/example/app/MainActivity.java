@@ -1,4 +1,4 @@
-package com.rawstory.rawstory;
+package com.example.app;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
