@@ -2,5 +2,10 @@
 <resources>
 
     <string name="app_name">Raw Story</string>
+    <string name="latest">Latest</string>
+    <string name="trending">Trending</string>
+    <string name="exclusive">Exclusive</string>
+    <string name="video">Video</string>
+    <string name="contactus">Contact Us</string>
 
 </resources>
