@@ -94,6 +94,7 @@ public class MainActivity extends Activity {
              */
             @Override
             public void onSelect(int position) {
+
                 if(position == 0){
                     mWebView.loadUrl("https://www.rawstory.com");
                     mRefresh.setRefreshing(true);
