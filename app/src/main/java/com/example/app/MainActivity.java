@@ -42,7 +42,6 @@ public class MainActivity extends Activity {
         bottomMenu = findViewById(R.id.nav_view);
 
 
-
         BottomBarItem latest = new BottomBarItem(R.drawable.ic_trending_filled, R.string.latest);
         BottomBarItem trending = new BottomBarItem(R.drawable.ic_trending, R.string.trending);
         BottomBarItem exclusive = new BottomBarItem(R.drawable.ic_exclusive, R.string.exclusive);
@@ -81,8 +80,8 @@ public class MainActivity extends Activity {
         };
         handler.postDelayed(r, 5000);
 
-//         REMOTE RESOURCE
-        mWebView.loadUrl("https://www.rawstory.com");
+//      REMOTE RESOURCE
+        mWebView.loadUrl("https://zoxannedev.wpengine.com/app-latest/?app_template=true");
 
         bottomMenu.setOnSelectListener(new BottomNavigationBar.OnSelectListener() {
             /**
@@ -96,28 +95,28 @@ public class MainActivity extends Activity {
             public void onSelect(int position) {
 
                 if(position == 0){
-                    mWebView.loadUrl("https://www.rawstory.com");
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/app-latest/?app_template=true");
                     mRefresh.setRefreshing(true);
                 }
                 if(position == 1){
 
-                    mWebView.loadUrl("https://www.rawstory.com/category/breaking-banner/");
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/app-trending/?app_template=true");
                     mRefresh.setRefreshing(true);
 
                 }
                 if(position == 2){
 
-                    mWebView.loadUrl("https://www.rawstory.com/raw-story-investigate/");
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/category/raw-investigates/?app_template=true");
                     mRefresh.setRefreshing(true);
                 }
                 if(position == 3){
 
-                    mWebView.loadUrl("https://www.rawstory.com/category/all-video/");
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/category/all-video/?app_template=true");
                     mRefresh.setRefreshing(true);
 
                 }
                 if(position == 4){
-                    mWebView.loadUrl("https://www.rawstory.com/category/all-video/");
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/app-content/?app_template=true");
                     mRefresh.setRefreshing(true);
 
                 }
@@ -147,7 +146,7 @@ public class MainActivity extends Activity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 Uri uri = Uri.parse(url);
-                if (uri.getHost() != null && uri.getHost().contains("rawstory.com")) {
+                if (uri.getHost() != null && uri.getHost().contains("rawstory.com") || url.contains("zoxannedev.wpengine.com")) {
                     if(mSplash.getVisibility() != View.VISIBLE) {
                         mRefresh.setRefreshing(true);
                     }
