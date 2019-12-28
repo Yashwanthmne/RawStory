@@ -56,6 +56,7 @@ public class MainActivity extends Activity {
 
 
         mRefresh.setEnabled(false);
+        bottomMenu.setVisibility(View.GONE);
         mSplash.setVisibility(View.VISIBLE);
         mWebView.setVisibility(View.GONE);
 //        mWebView.setWebViewClient(new WebViewClient());
@@ -163,6 +164,7 @@ public class MainActivity extends Activity {
                 Log.e("YM", "INSIDE onPageFinished()");
                 mSplash.setVisibility(View.GONE);
                 mWebView.setVisibility(View.VISIBLE);
+                bottomMenu.setVisibility(View.VISIBLE);
                 mRefresh.setRefreshing(false);
             }
         });
