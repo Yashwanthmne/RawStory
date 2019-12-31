@@ -148,6 +148,11 @@ public class MainActivity extends Activity {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 Uri uri = Uri.parse(url);
                 if (uri.getHost() != null && uri.getHost().contains("rawstory.com") || url.contains("zoxannedev.wpengine.com")) {
+                    if(!url.contains("app_template")){
+                        url = url.concat("?app_template=true");
+                        mWebView.loadUrl(url);
+                    }
+
                     if(mSplash.getVisibility() != View.VISIBLE) {
                         mRefresh.setRefreshing(true);
                     }
