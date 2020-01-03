@@ -84,6 +84,40 @@ public class MainActivity extends Activity {
 //      REMOTE RESOURCE
         mWebView.loadUrl("https://zoxannedev.wpengine.com/app-latest/?app_template=true");
 
+        bottomMenu.setOnReselectListener(new BottomNavigationBar.OnReselectListener() {
+            @Override
+            public void onReselect(int position) {
+
+                if(position == 0){
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/app-latest/?app_template=true");
+                    mRefresh.setRefreshing(true);
+                }
+                if(position == 1){
+
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/app-trending/?app_template=true");
+                    mRefresh.setRefreshing(true);
+
+                }
+                if(position == 2){
+
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/category/raw-investigates/?app_template=true");
+                    mRefresh.setRefreshing(true);
+                }
+                if(position == 3){
+
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/category/all-video/?app_template=true");
+                    mRefresh.setRefreshing(true);
+
+                }
+                if(position == 4){
+                    mWebView.loadUrl("https://zoxannedev.wpengine.com/app-content/?app_template=true");
+                    mRefresh.setRefreshing(true);
+
+                }
+
+            }
+        });
+
         bottomMenu.setOnSelectListener(new BottomNavigationBar.OnSelectListener() {
             /**
              * Change URL below to the suited webpage to be loaded. This is
